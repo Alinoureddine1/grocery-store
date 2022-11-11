@@ -1,4 +1,6 @@
-
+//Group members:
+//Ali Noureddine - 40159265
+//Aman singh - 40190387
 #include <iostream>
 #include "Beef.h"
 #include "Meat.h"
