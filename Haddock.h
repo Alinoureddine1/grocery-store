@@ -8,15 +8,18 @@ private:
 	std::string unit;
 	std::string name;
 	std::string category;
-	const double price = 20.0;
+	double price;
 	double stock;
 public:
 	Haddock();
+	Haddock(double, double);
 	virtual double getcost(double);
 	virtual void print() const ;
 	virtual std::string getcategory();
 	virtual double getprice();
 	virtual std::string getunit();
+	virtual void setrprice(double);
+	virtual void setstock(double);
 	virtual double getstock();
 	virtual std::string getname();
 	virtual ~Haddock();

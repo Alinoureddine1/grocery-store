@@ -3,15 +3,33 @@
 using namespace std;
 
 Yogurt::Yogurt() {
-	this->stock = 20;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "Yogurt";
 	this->category = "Dairy";
 	this->unit = "kg";
 }
 
+Yogurt::Yogurt(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Yogurt";
+	this->category = "Dairy";
+	this->unit = "kg";
+
+}
+
 std::string Yogurt::getcategory() {
 	return this->category;
 }
+
+void Yogurt::setrprice(double x) {
+	this->price = x;
+}
+void Yogurt::setstock(double x) {
+	this->stock = x;
+}
+
 
 double Yogurt::getprice() {
 	return this->price;
@@ -34,7 +52,7 @@ double Yogurt::getcost(double x) {
 
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 
@@ -50,4 +68,5 @@ std::string Yogurt::getname() {
 }
 
 Yogurt::~Yogurt() {
+	cout << "Deleting class Yogurt\n";
 }

@@ -3,10 +3,20 @@
 using namespace std;
 
 Milk::Milk() {
-	this->stock = 200;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "Milk";
 	this->category = "Dairy";
 	this->unit = "L";
+}
+
+Milk::Milk(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Milk";
+	this->category = "Dairy";
+	this->unit = "L";
+
 }
 
 std::string Milk::getcategory() {
@@ -34,12 +44,20 @@ double Milk::getcost(double x) {
 
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 
 
 }
+
+void Milk::setrprice(double x) {
+	this->price = x;
+}
+void Milk::setstock(double x) {
+	this->stock = x;
+}
+
 
 double Milk::getstock() {
 	return this->stock;
@@ -50,4 +68,5 @@ std::string Milk::getname() {
 }
 
 Milk::~Milk() {
+	cout << "Deleting class Milk\n";
 }

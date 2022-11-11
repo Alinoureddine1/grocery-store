@@ -1,8 +1,8 @@
 #pragma once
 #include <string>
-#include "Dairy.h"
+#include "VegetablesFruits.h"
 
-class Milk:public Dairy
+class Carrots :public VegetablesFruits
 {
 
 private:
@@ -12,17 +12,17 @@ private:
 	double price;
 	double stock;
 public:
-	Milk();
-	Milk(double, double);;
+	Carrots();
+	Carrots(double, double);
 	virtual void print() const;
 	virtual double getcost(double);
-	virtual void setrprice(double);
-	virtual void setstock(double);
 	virtual std::string getcategory();
 	virtual std::string getunit();
+	virtual void setrprice(double);
+	virtual void setstock(double);
 	virtual double getprice();
 	virtual double getstock();
 	virtual std::string getname();
-	virtual ~Milk();
+	virtual ~Carrots();
 };
 

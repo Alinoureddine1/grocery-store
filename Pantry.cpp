@@ -23,11 +23,11 @@ std::string Pantry::getunit() {
 	return "";
 }
 
-// double Pantry::getcost(double x) {
-// 	cout << "Please make your selection from the following categories: \n";
-// 	cout << "Milk\nCheese\nYogurt\nPantry\n";
-// 	return 0;
-// }
+ double Pantry::getcost(double x) {
+	cout << "Please make your selection from the following categories: \n";
+	cout << "Milk\nCheese\nYogurt\nPantry\n";
+	return 0;
+ }
 
 double Pantry::getstock() {
 	return 0.0;

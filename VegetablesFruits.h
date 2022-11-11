@@ -13,6 +13,8 @@ public:
 	virtual double getstock();
 	virtual std::string getcategory();
 	virtual double getprice();
+	virtual void setrprice(double)=0;
+	virtual void setstock(double)=0;
 	virtual std::string getunit();
 	virtual std::string getname();
 	virtual ~VegetablesFruits();

@@ -3,14 +3,31 @@
 using namespace std;
 
 Eggs::Eggs() {
-	this->stock = 40;
+	this->stock = 0;
+	this-> price = 0;
 	this->name = "Eggs";
 	this->category = "Dairy";
 	this->unit = "dozen";
 }
 
+Eggs::Eggs(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Eggs";
+	this->category = "Dairy";
+	this->unit = "dozen";
+
+}
+
 std::string Eggs::getcategory() {
 	return this->category;
+}
+
+void Eggs::setrprice(double x) {
+	this->price = x;
+}
+void Eggs::setstock(double x) {
+	this->stock = x;
 }
 
 double Eggs::getprice() {
@@ -34,7 +51,7 @@ double Eggs::getcost(double x) {
 
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 
@@ -50,4 +67,5 @@ std::string Eggs::getname() {
 }
 
 Eggs::~Eggs() {
+	cout << "Deleting class Eggs\n";
 }

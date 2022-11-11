@@ -16,6 +16,8 @@ public:
 	virtual double getprice();
 	virtual std::string getunit();
 	virtual std::string getname();
+	virtual void setrprice(double)=0;
+	virtual void setstock(double)=0;
 	virtual ~Fish();
 };
 

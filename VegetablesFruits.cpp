@@ -23,11 +23,11 @@ std::string VegetablesFruits::getunit() {
 	return "";
 }
 
-// double VegetablesFruits::getcost(double x) {
-// 	cout << "Please make your selection from the following categories: \n";
-// 	cout << "Milk\nCheese\nYogurt\nPantry\n";
-// 	return 0;
-// }
+ double VegetablesFruits::getcost(double x) {
+ 	cout << "Please make your selection from the following categories: \n";
+ 	cout << "Milk\nCheese\nYogurt\nPantry\n";
+ 	return 0;
+ }
 
 double VegetablesFruits::getstock() {
 	return 0.0;

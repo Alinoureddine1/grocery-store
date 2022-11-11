@@ -3,11 +3,22 @@
 using namespace std;
 
 SeaBass::SeaBass() {
-	this->stock = 40;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "SeaBass";
 	this->unit = "Kg";
 	this->category = "Fish";
 }
+
+SeaBass::SeaBass(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "SeaBass";
+	this->unit = "Kg";
+	this->category = "Fish";
+
+}
+
 
 void SeaBass::print() const {
 	cout << "Name: " <<this->name<< endl;
@@ -24,6 +35,14 @@ std::string SeaBass::getunit() {
 	return this->unit;
 }
 
+void SeaBass::setrprice(double x) {
+	this->price = x;
+}
+void SeaBass::setstock(double x) {
+	this->stock = x;
+}
+
+
 double SeaBass::getprice() {
 	return this->price;
 }
@@ -36,7 +55,7 @@ double SeaBass::getcost(double x) {
 		return (x * this->price);
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 }
@@ -49,4 +68,6 @@ std::string SeaBass::getname() {
 	return this->name;
 }
 
-SeaBass::~SeaBass() {}
+SeaBass::~SeaBass() {
+	cout << "Deleting class SeaBass\n";
+}

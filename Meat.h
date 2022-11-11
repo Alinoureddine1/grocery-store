@@ -14,6 +14,8 @@ public:
 	virtual std::string getcategory();
 	virtual double getprice();
 	virtual std::string getunit();
+	virtual void setrprice(double)=0;
+	virtual void setstock(double)=0;
 	virtual std::string getname();
 	virtual ~Meat();
 };

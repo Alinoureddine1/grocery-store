@@ -3,10 +3,21 @@
 using namespace std;
 
 Cheese::Cheese() {
-	this->stock = 30;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "Cheese";
 	this->category = "Dairy";
 	this->unit = "kg";
+}
+
+
+Cheese::Cheese(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Cheese";
+	this->category = "Dairy";
+	this->unit = "kg";
+
 }
 
 std::string Cheese::getcategory() {
@@ -15,6 +26,13 @@ std::string Cheese::getcategory() {
 
 double Cheese::getprice() {
 	return this->price;
+}
+
+void Cheese::setrprice(double x) {
+	this->price = x;
+}
+void Cheese::setstock(double x) {
+	this->stock = x;
 }
 
 std::string Cheese::getunit() {
@@ -34,7 +52,7 @@ double Cheese::getcost(double x) {
 
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 
@@ -50,4 +68,5 @@ std::string Cheese::getname() {
 }
 
 Cheese::~Cheese() {
+	cout << "Deleting class Cheese\n";
 }

@@ -8,14 +8,17 @@ private:
 	std::string unit;
 	std::string name;
 	std::string category;
-	const double price =28.0;
+	double price;
 	double stock;
 public:
 	Salmon();
+	Salmon(double, double);;
 	virtual double getcost(double);
 	virtual double getstock();
 	virtual std::string getcategory();
 	virtual double getprice();
+	virtual void setrprice(double);
+	virtual void setstock(double);
 	virtual std::string getunit();
 	virtual std::string getname();
 	virtual void print() const;

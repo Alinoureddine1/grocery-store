@@ -4,11 +4,22 @@ using namespace std;
 
 
 Salmon::Salmon() {
-	this->stock = 50;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "Salmon";
 	this->unit = "Kg";
 	this->category = "Fish";
 }
+
+Salmon::Salmon(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Salmon";
+	this->unit = "Kg";
+	this->category = "Fish";
+
+}
+
 void Salmon::print() const {
 	cout << "Name: " << this->name << endl;
 	cout << "Stock: " << this->stock << endl;
@@ -24,7 +35,7 @@ double Salmon::getcost(double x) {
 		return (x * this->price);
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of " << this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 }
@@ -45,10 +56,19 @@ std::string Salmon::getname() {
 	return this->name;
 }
 
+void Salmon::setrprice(double x) {
+	this->price = x;
+}
+void Salmon::setstock(double x) {
+	this->stock = x;
+}
+
+
 std::string Salmon::getunit() {
 	return this->unit;
 }
 
 Salmon::~Salmon() {
+	cout << "Deleting class Salmon\n";
 
 }

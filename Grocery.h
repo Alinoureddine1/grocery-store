@@ -9,7 +9,9 @@ public:
 	virtual std::string getcategory()=0;
 	virtual std::string getunit() = 0;
 	virtual double getprice()=0;
-	virtual double getcost(double)=0;
+	virtual void setrprice(double) = 0;
+	virtual void setstock(double) = 0;
+	virtual double getcost(double) = 0;
 	virtual double getstock() = 0;
 	virtual ~Grocery();
 	

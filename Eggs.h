@@ -9,14 +9,17 @@ private:
 	std::string unit;
 	std::string name;
 	std::string category;
-	const double price = 3.0;
+	double price;
 	double stock;
 public:
 	Eggs();
+	Eggs(double, double);
 	virtual void print() const;
 	virtual double getcost(double);
 	virtual std::string getcategory();
 	virtual std::string getunit();
+	virtual void setrprice(double);
+	virtual void setstock(double);
 	virtual double getprice();
 	virtual double getstock();
 	virtual std::string getname();

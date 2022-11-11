@@ -3,14 +3,31 @@
 using namespace std;
 
 Beef::Beef() {
-	this->stock = 100;
+	this->stock = 0;
+	this->price = 0;
 	this->name = "Beef";
 	this->category = "Meat";
 	this->unit = "Kg";
 }
+//          stock    price 
+Beef::Beef(double x, double y) {
+	this->stock = x;
+	this->price = y;
+	this->name = "Beef";
+	this->category = "Meat";
+	this->unit = "Kg";
+
+}
 
 std::string Beef::getcategory() {
 	return this->category;
+}
+
+void Beef::setrprice(double x) {
+	this->price = x;
+}
+void Beef::setstock(double x) { 
+	this->stock = x;
 }
 
 double Beef::getprice() {
@@ -34,7 +51,7 @@ double Beef::getcost(double x) {
 	
 	}
 	else {
-		cout << "The remaining stock is: " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n";
+		cout << "\nThe remaining stock of "<< this->getname() << " is " << this->stock << " " << this->unit << "s Please choose an appropriate ammount.\n\n";
 		return 0.0;
 	}
 	
@@ -50,4 +67,5 @@ std::string Beef::getname() {
 }
 
 Beef::~Beef() {
+	cout << "Deleting class Beef\n";
 }
